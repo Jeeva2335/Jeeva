@@ -23,13 +23,18 @@ public class HomeTest {
 	@Test
 	public void verifywomen(){
 		Assert.assertTrue(homepage.getwomen().isDisplayed());
-	}
-	@ Test
-	public void verifydresses(){
 		Assert.assertTrue(homepage.getdresess().isDisplayed());
-	}
-	@Test
-	public void verifyTshirt(){
 		Assert.assertTrue(homepage.getTshirt().isDisplayed());
 	}
+	
+    @Test
+    public void TestTocheckNewslatterFunction(){
+    	String Email = BC.RandomEmailId(40000);
+    	Assert.assertTrue(BC.elementFound(homepage.getNewslatter()));
+    	BC.Toclick(homepage.NewslatterOkButton());
+    	
+    }
 }
+	
+
+
